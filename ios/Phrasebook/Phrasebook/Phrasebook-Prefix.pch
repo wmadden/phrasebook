@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Phrasebook' target in the 'Phrasebook' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
