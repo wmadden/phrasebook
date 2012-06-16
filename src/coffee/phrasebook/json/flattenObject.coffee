@@ -9,3 +9,12 @@ phrasebook.json.flattenObject = (object) ->
             result = result.concat(phrasebook.json.flattenObject(value))
 
     return result
+
+phrasebook.json.makeNodeHash = (identifierList) ->
+    result = {}
+    for identifier in identifierList
+        result[identifier] = {
+            pictogramUrl: "../assets/pictograms/" + identifier + ".jpg",
+            name: ""
+        }
+    return result
