@@ -25,10 +25,21 @@ $(->
             }
         ]
 
-    view = new phrasebook.views.CurrentOptionsView()
-    view.setElement( $("#CurrentOptionsView") )
-    view.options = options
-    view.render()
-    view.delegateEvents()
+    currentOptionsView = new phrasebook.views.CurrentOptionsView()
+    
+    breadCrumbsView = new phrasebook.views.BreadCrumbsView()
+    
+    presentationModel = new phrasebook.models.PresentationModel()
 
+    currentOptionsView.presentationModel = presentationModel
+    currentOptionsView.setElement( $("#CurrentOptionsView") )
+    currentOptionsView.delegateEvents()
+    presentationModel.on('change', currentOptionsView.render, currentOptionsView)
+
+    breadCrumbsView.presentationModel = presentationModel
+    breadCrumbsView.setElement( $("#BreadCrumbsView") )
+    breadCrumbsView.delegateEvents()
+    presentationModel.on('change', breadCrumbsView.render, breadCrumbsView)
+
+    presentationModel.set('currentlyVisibleOptions', new Backbone.Collection(options))
 )
