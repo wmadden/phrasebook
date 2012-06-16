@@ -1,19 +1,5 @@
 $(->
     
-    renderOptions = (options) ->
-        for option in options
-            optionElement = $('<li><a class="option" href="#">' + option.text + '</a></li>')
-            $('#options').append(optionElement)
-            optionElement.children('a').data({ option: option })
-
-    clearOptions = ->
-        $("#options").empty()
-
-    onOptionClick = (event) ->
-        options = $(event.target).data().option.children || []
-        clearOptions()
-        renderOptions(options)
-
     options = [
             {
                 text: "where?",
@@ -39,7 +25,10 @@ $(->
             }
         ]
 
-    renderOptions(options)
+    view = new phrasebook.views.CurrentOptionsView()
+    view.setElement( $("#CurrentOptionsView") )
+    view.options = options
+    view.render()
+    view.delegateEvents()
 
-    $('.option').live('click', onOptionClick )
 )

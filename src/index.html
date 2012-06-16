@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<title></title>
-<!--[if IE]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<style>
-  article, aside, details, figcaption, figure, footer, header,
-  hgroup, menu, nav, section { display: block; }
-</style>
-<script type="text/javascript" src="javascript/lib/jquery-1.7.2.js"></script>
-<script type="text/javascript" src="javascript/lib/underscore.js"></script>
-<script type="text/javascript" src="javascript/phrasebook/base.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+      article, aside, details, figcaption, figure, footer, header,
+      hgroup, menu, nav, section { display: block; }
+    </style>
+    <script type="text/javascript" src="javascript/lib/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="javascript/lib/underscore.js"></script>
+    <script type="text/javascript" src="javascript/lib/backbone.js"></script>
+    <script type="text/javascript" src="javascript/lib/handlebars-1.0.0.beta.6.js"></script>
+    
+    <script type="text/javascript" src="javascript/namespace.js"></script>
+    <script type="text/javascript" src="javascript/phrasebook/views/CurrentOptionsView.js"></script>
+    <script type="text/javascript" src="javascript/phrasebook/base.js"></script>
 </head>
 <body>
 
-<ul id="options"></ul>
+    <div id="CurrentOptionsView">
+    </div>
+    <ul id="options"></ul>
 
 </body>
 </html>
