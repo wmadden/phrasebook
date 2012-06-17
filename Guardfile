@@ -9,10 +9,6 @@ end
 
 guard 'coffeescript', :input => 'src/coffee', :output => 'src/javascript'
 
-guard 'bundler' do
-  watch('Gemfile')
-  # Uncomment next line if Gemfile contain `gemspec' command
-  # watch(/^.+\.gemspec/)
+guard 'compass' do
+  watch('^src/(.*)\.s[ac]ss')
 end
-
-guard 'coffeescript', :input => 'app/assets/javascripts'

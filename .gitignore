@@ -5,3 +5,4 @@
 *.jpg
 .idea
 *.iml
+.sass-cache
