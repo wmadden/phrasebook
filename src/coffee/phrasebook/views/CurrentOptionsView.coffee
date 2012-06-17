@@ -3,17 +3,22 @@ namespace "phrasebook.views"
 class phrasebook.views.CurrentOptionsView extends Backbone.View
 
     events: {
-        "click a.option": "onOptionClick"
+        "change select": "onOptionChange"
     }
 
     render: ->
-        ul = $('<ul id="options"></ul>')
-        @presentationModel.get('currentlyVisibleOptions').each (option) ->
-            optionElement = $('<li><a class="option" href="#">' + option.get('name') + '</a></li>')
-            ul.append(optionElement)
-            optionElement.children('a').data({ option: option })
-        @$el.html(ul)
+        if (@presentationModel.get('currentlyVisibleOptions').isEmpty())
+          @$el.html("")
+        else
+          select = $('<select id="options"></select>')
+          select.append('<option class="option" selected="selected"></option>')
+          @presentationModel.get('currentlyVisibleOptions').each (option) ->
+              optionElement = $('<option class="option">' + option.get('name') + '</option>')
+              select.append(optionElement)
+              optionElement.data({ option: option })
+          @$el.html(select)
+        
         return this
-
-    onOptionClick: (event) ->
-        @presentationModel.chooseOption($(event.target).data().option)
+        
+    onOptionChange: (event) ->
+        @presentationModel.chooseOption($(event.target).children("option[selected=selected]").data().option)
