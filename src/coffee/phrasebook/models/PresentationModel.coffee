@@ -14,8 +14,11 @@ class phrasebook.models.PresentationModel extends Backbone.Model
 
     goBack: ->
         @get('previouslyVisitedOptions').pop()
-        lastOption = @get('previouslyVisitedOptions').last()
-        @set('currentlyVisibleOptions', new Backbone.Collection(lastOption.get('children')))
+        if (@get('previouslyVisitedOptions').isEmpty())
+          @set('currentlyVisibleOptions', new Backbone.Collection(_.values(@tree)))
+        else
+          lastOption = @get('previouslyVisitedOptions').last()
+          @set('currentlyVisibleOptions', new Backbone.Collection(lastOption.get('children')))
 
     parseJSONTree: (tree) ->
         for nodeID, children of tree
