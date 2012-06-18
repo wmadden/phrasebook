@@ -1,5 +1,6 @@
 @import "compass/typography/lists/bullets";
 @import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
 
 html, body {
   padding: 0;
@@ -40,6 +41,7 @@ html, body, #doc {
       display: block;
       border: 1px solid rgba(0, 0, 0, 0.55);
       background-color: #fdff60;
+      @include single-box-shadow(rgba(0,0,0,0.15), -4px, 6px, 6px, 0 );
 
       margin: 0 auto;
       margin-top: 1.0em;
