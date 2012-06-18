@@ -4,6 +4,7 @@ class phrasebook.views.CurrentOptionsView extends Backbone.View
 
     events: {
         "change select": "onOptionChange"
+        "click a": "onGoBack"
     }
 
     render: ->
@@ -17,8 +18,12 @@ class phrasebook.views.CurrentOptionsView extends Backbone.View
               select.append(optionElement)
               optionElement.data({ option: option })
           @$el.html(select)
-        
+          if (!@presentationModel.get('previouslyVisitedOptions').isEmpty())
+            @$el.append('<a href="#"> Back</a>')
         return this
         
     onOptionChange: (event) ->
         @presentationModel.chooseOption($(event.target).children("option[selected=selected]").data().option)
+
+    onGoBack: (event) ->
+        @presentationModel.goBack()
