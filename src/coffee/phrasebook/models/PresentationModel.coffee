@@ -9,8 +9,13 @@ class phrasebook.models.PresentationModel extends Backbone.Model
         @set('previouslyVisitedOptions', new Backbone.Collection())
 
     chooseOption: (option) ->
-        @get('previouslyVisitedOptions').push(option) if option.get('pictogramURL')?
+        @get('previouslyVisitedOptions').push(option)
         @set('currentlyVisibleOptions', new Backbone.Collection(option.get('children')))
+
+    goBack: ->
+        @get('previouslyVisitedOptions').pop()
+        lastOption = @get('previouslyVisitedOptions').last()
+        @set('currentlyVisibleOptions', new Backbone.Collection(lastOption.get('children')))
 
     parseJSONTree: (tree) ->
         for nodeID, children of tree
