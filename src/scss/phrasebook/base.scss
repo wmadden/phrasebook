@@ -1,0 +1,70 @@
+@import "compass/typography/lists/bullets";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: image-url("wood_floor.jpg");
+}
+
+html, body, #doc {
+  height: 100%;
+  width: 100%;
+}
+
+#doc {
+  outline: 1px solid blue;
+}
+
+#BreadCrumbsView {
+  width: 100%;
+  height: 90%;
+  position: relative;
+
+  #breadcrumbs {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    @include no-bullets;
+
+    .breadcrumb {
+      width: 180px;
+      height: 180px;
+      display: block;
+      border: 1px solid rgba(0, 0, 0, 0.55);
+      background-color: #fdff60;
+      @include single-box-shadow(rgba(0,0,0,0.15), -4px, 6px, 6px, 0 );
+
+      margin: 0 auto;
+      margin-top: 1.0em;
+
+      @include border-radius(5px);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+#CurrentOptionsView {
+  height: 10%;
+  width: 100%;
+  position: relative;
+
+  #options {
+    width: 100%;
+    height: 100% !important;
+    display: block !important;
+  }
+}
+

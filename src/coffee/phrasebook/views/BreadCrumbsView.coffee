@@ -7,12 +7,14 @@ class phrasebook.views.BreadCrumbsView extends Backbone.View
     }
     
     render: ->
-        ul = $('<ul id="options"></ul>')
+        ul = $('<ul id="breadcrumbs"></ul>')
         @presentationModel.get('previouslyVisitedOptions').each (option) ->
             if option.get('pictogramURL')
-              optionElement = $('<li><a class="option" href="#">' +
-                                  '<img width="200" height="200" src="' + option.get('pictogramURL') + '" />' +
-                                '</a></li>')
+              optionElement = $(
+                '<li class="breadcrumb"><a class="option" href="#">' +
+                '<img width="200" height="200" src="' + option.get('pictogramURL') + '" />' +
+                '</a></li>'
+              )
               ul.append(optionElement)
               optionElement.children('a').data({ option: option })
         

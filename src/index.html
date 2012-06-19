@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html>
+<!-- Conditional comment for mobile ie7 blogs.msdn.com/b/iemobile/ -->
+<!--[if IEMobile 7 ]>    <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
 <head>
     <meta charset="utf-8" />
-    <title></title>
+
+    <title>Visual Phrasebook</title>
+    <meta name="description" content="">
+
+    <!-- Mobile viewport optimization h5bp.com/ad -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+    <!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
+    <!-- For third generation iPad Retina Display -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png" />
+    <!-- For iPhone 4 with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png" />
+    <!-- For first-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png" />
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png" />
+    <!-- For nokia devices: -->
+    <link rel="shortcut icon" href="img/touch/apple-touch-icon.png" />
+
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <style>
-      article, aside, details, figcaption, figure, footer, header,
-      hgroup, menu, nav, section { display: block; }
-    </style>
+
+    <!-- iPad/iPhone specific css below, add after your main css >
+    <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />
+    -->
+
     <script type="text/javascript" src="javascript/lib/jquery-1.7.2.js"></script>
     <script type="text/javascript" src="javascript/lib/underscore.js"></script>
     <script type="text/javascript" src="javascript/lib/backbone.js"></script>
+
+    <script type="text/javascript" src="javascript/lib/mobile-boilerplate/helper.js"></script>
+
     <script type="text/javascript" src="javascript/namespace.js"></script>
     <script type="text/javascript" src="javascript/phrasebook/views/CurrentOptionsView.js"></script>
     <script type="text/javascript" src="javascript/phrasebook/views/BreadCrumbsView.js"></script>
@@ -20,14 +48,19 @@
     <script type="text/javascript" src="javascript/phrasebook/base.js"></script>
     <script type="text/javascript" src="javascript/phrasebook/json/tree.js"></script>
     <script type="text/javascript" src="javascript/phrasebook/json/nodes.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/phrasebook/base.css">
 </head>
 <body>
 
-    <div id="BreadCrumbsView">
+    <div id="doc">
+        <div id="BreadCrumbsView">
+        </div>
+
+        <div id="CurrentOptionsView">
+        </div>
     </div>
 
-    <div id="CurrentOptionsView">
-    </div>
-    
 </body>
 </html>
