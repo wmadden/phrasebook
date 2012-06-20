@@ -62,7 +62,7 @@ phrasebook.json.tree = {
         how_much_money: {
             room: null,
             transport: modes_of_transport,
-            ticket: null,
+            tickets: null,
             tourist_attraction: null,
             that: null
         },
