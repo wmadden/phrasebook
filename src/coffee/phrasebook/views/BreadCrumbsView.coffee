@@ -14,10 +14,10 @@ class phrasebook.views.BreadCrumbsView extends Backbone.View
             if option.get('pictogramURL')?
                 optionHTML += '<img width="200" height="200" src="' + option.get('pictogramURL') + '" />';
 
+            optionHTML += '<span class="label">' + option.get('name') + '</span>';
+
             if option == @presentationModel.get('previouslyVisitedOptions').last()
                 optionHTML += '<a href="#" class="delete">Delete</a>';
-
-            optionHTML += '<span class="label">' + option.get('name') + '</span>';
 
             optionHTML += '</li>'
 
