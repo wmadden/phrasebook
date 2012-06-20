@@ -35,7 +35,6 @@ phrasebook.json.nodes = {
         name:        "Departs"
     },
     open:              {
-        pictogramURL:"images/pictograms/open.jpg",
         name:        "Open"
     },
     restaurant:        {
@@ -59,7 +58,6 @@ phrasebook.json.nodes = {
         name:        "Pharmacy"
     },
     close:             {
-        pictogramURL:"images/pictograms/close.jpg",
         name:        "Close"
     },
     check_in:          {
@@ -85,7 +83,6 @@ phrasebook.json.nodes = {
         name:        "Tour"
     },
     hotel:             {
-        pictogramURL:"images/pictograms/hotel.jpg",
         name:        "Hotel"
     },
     services:          {
@@ -100,7 +97,6 @@ phrasebook.json.nodes = {
         name:        "Police"
     },
     doctor:            {
-        pictogramURL:"images/pictograms/doctor.jpg",
         name:        "Doctor"
     },
     bathroom:          {
@@ -108,31 +104,23 @@ phrasebook.json.nodes = {
         name:        "Bathroom"
     },
     kitchen:           {
-        pictogramURL:"images/pictograms/kitchen.jpg",
         name:        "Kitchen"
     },
     how_much_money:    {
-        pictogramURL:"images/pictograms/how_much_money.jpg",
         name:        "How much does this cost"
     },
     room:              {
-        pictogramURL:"images/pictograms/room.jpg",
+        pictogramURL:"images/pictograms/hotel_room.jpg",
         name:        "Room"
-    },
-    ticket:            {
-        pictogramURL:"images/pictograms/ticket.jpg",
-        name:        "Ticket"
     },
     that:              {
         pictogramURL:"images/pictograms/that.jpg",
         name:        "That"
     },
     how_does_this_work:{
-        pictogramURL:"images/pictograms/how_does_this_work.jpg",
         name:        "How does this work"
     },
     is_X_Y:            {
-        pictogramURL:"images/pictograms/is_X_Y.jpg",
         name:        "Is"
     },
     food:              {
@@ -175,15 +163,12 @@ phrasebook.json.nodes = {
         name:        "Statement"
     },
     I_want_a:          {
-        pictogramURL:"images/pictograms/I_want_a.jpg",
         name:        "I want a"
     },
     I_want_to_do:      {
-        pictogramURL:"images/pictograms/I_want_to_do.jpg",
         name:        "I want to"
     },
     buy:               {
-        pictogramURL:"images/pictograms/buy.jpg",
         name:        "Buy"
     },
     map:               {
