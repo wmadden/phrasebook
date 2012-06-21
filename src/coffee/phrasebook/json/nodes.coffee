@@ -5,30 +5,30 @@ phrasebook.json.nodes = {
         name:        "Question"
     },
     when:              {
-        pictogramURL:"images/pictograms/when.jpg",
+        pictogramURL:"images/pictograms/when.png",
         name:        "When"
     },
     arrives:           {
         name:        "Arrives"
     },
     taxi:              {
-        pictogramURL:"images/pictograms/taxi.jpg",
+        pictogramURL:"images/pictograms/taxi.png",
         name:        "Taxi"
     },
     train:             {
-        pictogramURL:"images/pictograms/train.jpg",
+        pictogramURL:"images/pictograms/train.png",
         name:        "Train"
     },
     bus:               {
-        pictogramURL:"images/pictograms/bus.jpg",
+        pictogramURL:"images/pictograms/bus.png",
         name:        "Bus"
     },
     boat:              {
-        pictogramURL:"images/pictograms/boat.jpg",
+        pictogramURL:"images/pictograms/boat.png",
         name:        "Boat"
     },
     person:            {
-        pictogramURL:"images/pictograms/person.jpg",
+        pictogramURL:"images/pictograms/person.png",
         name:        "Person"
     },
     departs:           {
@@ -38,38 +38,38 @@ phrasebook.json.nodes = {
         name:        "Open"
     },
     restaurant:        {
-        pictogramURL:"images/pictograms/restaurant.jpg",
+        pictogramURL:"images/pictograms/restaurant.png",
         name:        "Restaurant"
     },
     bar:               {
-        pictogramURL:"images/pictograms/bar.jpg",
+        pictogramURL:"images/pictograms/bar.png",
         name:        "Bar"
     },
     tourist_attraction:{
-        pictogramURL:"images/pictograms/tourist_attraction.jpg",
+        pictogramURL:"images/pictograms/tourist_attraction.png",
         name:        "Tourist Attraction"
     },
     hotel_room:        {
-        pictogramURL:"images/pictograms/hotel_room.jpg",
+        pictogramURL:"images/pictograms/hotel_room.png",
         name:        "Hotel Room"
     },
     pharmacy:          {
-        pictogramURL:"images/pictograms/pharmacy.jpg",
+        pictogramURL:"images/pictograms/pharmacy.png",
         name:        "Pharmacy"
     },
     close:             {
         name:        "Close"
     },
     check_in:          {
-        pictogramURL:"images/pictograms/check_in.jpg",
+        pictogramURL:"images/pictograms/check_in.png",
         name:        "Check In"
     },
     check_out:         {
-        pictogramURL:"images/pictograms/check_out.jpg",
+        pictogramURL:"images/pictograms/check_out.png",
         name:        "Check Out"
     },
     how_do_I_get_to:   {
-        pictogramURL:"images/pictograms/where.jpg",
+        pictogramURL:"images/pictograms/where.png",
         name:        "How do I get to"
     },
     transport:         {
@@ -79,7 +79,7 @@ phrasebook.json.nodes = {
         name:        "Entertainment"
     },
     tour:              {
-        pictogramURL:"images/pictograms/tour.jpg",
+        pictogramURL:"images/pictograms/tour.png",
         name:        "Tour"
     },
     hotel:             {
@@ -89,18 +89,19 @@ phrasebook.json.nodes = {
         name:        "Services"
     },
     hospital:          {
-        pictogramURL:"images/pictograms/hospital.jpg",
+        pictogramURL:"images/pictograms/hospital.png",
         name:        "Hospital"
     },
     police:            {
-        pictogramURL:"images/pictograms/police.jpg",
+        pictogramURL:"images/pictograms/police.png",
         name:        "Police"
     },
     doctor:            {
+        pictogramURL:"images/pictograms/pharmacy.png",
         name:        "Doctor"
     },
     bathroom:          {
-        pictogramURL:"images/pictograms/bathroom.jpg",
+        pictogramURL:"images/pictograms/bathroom.png",
         name:        "Bathroom"
     },
     kitchen:           {
@@ -110,11 +111,11 @@ phrasebook.json.nodes = {
         name:        "How much does this cost"
     },
     room:              {
-        pictogramURL:"images/pictograms/hotel_room.jpg",
+        pictogramURL:"images/pictograms/hotel_room.png",
         name:        "Room"
     },
     that:              {
-        pictogramURL:"images/pictograms/that.jpg",
+        pictogramURL:"images/pictograms/that.png",
         name:        "That"
     },
     how_does_this_work:{
@@ -124,39 +125,39 @@ phrasebook.json.nodes = {
         name:        "Is"
     },
     food:              {
-        pictogramURL:"images/pictograms/food.jpg",
+        pictogramURL:"images/pictograms/food.png",
         name:        "Food"
     },
     good:              {
-        pictogramURL:"images/pictograms/good.jpg",
+        pictogramURL:"images/pictograms/good.png",
         name:        "Good"
     },
     dangerous:         {
-        pictogramURL:"images/pictograms/dangerous.jpg",
+        pictogramURL:"images/pictograms/dangerous.png",
         name:        "Dangerous"
     },
     hot:               {
-        pictogramURL:"images/pictograms/hot.jpg",
+        pictogramURL:"images/pictograms/hot.png",
         name:        "Hot"
     },
     cold:              {
-        pictogramURL:"images/pictograms/cold.jpg",
+        pictogramURL:"images/pictograms/cold.png",
         name:        "Cold"
     },
     far:               {
-        pictogramURL:"images/pictograms/far.jpg",
+        pictogramURL:"images/pictograms/far.png",
         name:        "Far"
     },
     expensive:         {
-        pictogramURL:"images/pictograms/expensive.jpg",
+        pictogramURL:"images/pictograms/expensive.png",
         name:        "Expensive"
     },
     broken:            {
-        pictogramURL:"images/pictograms/broken.jpg",
+        pictogramURL:"images/pictograms/broken.png",
         name:        "Broken"
     },
     water:             {
-        pictogramURL:"images/pictograms/water.jpg",
+        pictogramURL:"images/pictograms/water.png",
         name:        "Water"
     },
     statements:        {
@@ -172,19 +173,19 @@ phrasebook.json.nodes = {
         name:        "Buy"
     },
     map:               {
-        pictogramURL:"images/pictograms/map.jpg",
+        pictogramURL:"images/pictograms/map.png",
         name:        "Map"
     },
     luggage:           {
-        pictogramURL:"images/pictograms/luggage.jpg",
+        pictogramURL:"images/pictograms/luggage.png",
         name:        "Luggage"
     },
     clothes:           {
-        pictogramURL:"images/pictograms/clothes.jpg",
+        pictogramURL:"images/pictograms/clothes.png",
         name:        "Clothes"
     },
     tickets:           {
-        pictogramURL:"images/pictograms/tickets.jpg",
+        pictogramURL:"images/pictograms/tickets.png",
         name:        "Tickets"
     }
 }
