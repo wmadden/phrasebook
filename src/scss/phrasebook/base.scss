@@ -24,7 +24,7 @@ html, body, #doc {
 
 #BreadCrumbsView {
   width: 100%;
-  height: 90%;
+  height: 100%;
   position: relative;
 
   #breadcrumbs {
@@ -105,7 +105,8 @@ html, body, #doc {
 #CurrentOptionsView {
   height: 10%;
   width: 100%;
-  position: relative;
+  position: absolute;
+  bottom: 0;
 
   .options {
     width: 100%;
