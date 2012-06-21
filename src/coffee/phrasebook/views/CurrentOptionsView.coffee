@@ -11,7 +11,7 @@ class phrasebook.views.CurrentOptionsView extends Backbone.View
           @$el.html("")
         else
           select = $('<select class="options"></select>')
-          select.append('<option class="option" selected="selected"></option>')
+          select.append('<option class="option" selected="selected">Say...</option>')
           @presentationModel.get('currentlyVisibleOptions').each (option) ->
               optionElement = $('<option class="option">' + option.get('name') + '</option>')
               select.append(optionElement)
