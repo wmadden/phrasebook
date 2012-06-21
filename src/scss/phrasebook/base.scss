@@ -42,14 +42,10 @@ html, body, #doc {
       width: 200px;
       min-height: 40px;
       display: block;
-      border: 1px solid rgba(0, 0, 0, 0.55);
-      background-color: #fdff60;
-      @include single-box-shadow(rgba(0,0,0,0.15), -4px, 6px, 6px, 0 );
+      background: image-url("post-it.png") 50% 50%;
 
-      margin: 0 auto;
-      margin-top: 25px;
-
-      @include border-radius(5px);
+      margin: 0 auto -25px;
+      padding: 25px;
 
       img {
         width: 200px;
@@ -58,8 +54,8 @@ html, body, #doc {
 
       .delete {
         position: absolute;
-        right: -25px;
-        top: -25px;
+        right: 0;
+        top: 0;
         width: 50px;
         height: 50px;
         @include replace-text("delete.png");
@@ -68,9 +64,13 @@ html, body, #doc {
 
       .label {
         position: absolute;
-        width: 100%;
+
         height: 40px;
-        bottom: 0;
+
+        bottom: 25px;
+        left: 0;
+        right: 0;
+
         font-size: 16px;
         font-weight: bold;
         display: block;
@@ -79,6 +79,25 @@ html, body, #doc {
         @include text-shadow(rgba(255,255,255,1.0) 0 1px 2px);
         color: #232323;
       }
+
+      &.text-only {
+        background: transparent;
+
+        &:first-child {
+        }
+
+        padding: 0;
+
+        .delete {
+          right: -25px;
+          top: -5px;
+        }
+
+        .label {
+          bottom: 0;
+        }
+      }
+
     }
   }
 }
