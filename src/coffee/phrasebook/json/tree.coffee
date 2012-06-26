@@ -5,7 +5,6 @@ services = {
     hospital: null,
     police: null,
     doctor: null,
-    bathroom: null,
     kitchen: null
 }
 
@@ -56,6 +55,7 @@ phrasebook.json.tree = {
                 tour: null,
                 tourist_attraction: null
             },
+            bathroom: null,
             hotel: null,
             services: services
         },
@@ -83,6 +83,7 @@ phrasebook.json.tree = {
         I_want_a: _.extend({
             transport: modes_of_transport,
             services: services,
+            bathroom: null,
             hotel: null
         }, consumables ),
         I_want_to_do: {

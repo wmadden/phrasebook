@@ -131,7 +131,7 @@ phrasebook.json.nodes = {
         name:        "How does this work"
     },
     is_X_Y:            {
-        name:        "Is"
+        name:        "Is..."
     },
     food:              {
         pictogramURL:"images/pictograms/food.png",
