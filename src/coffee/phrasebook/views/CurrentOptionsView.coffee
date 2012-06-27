@@ -3,7 +3,7 @@ namespace "phrasebook.views"
 class phrasebook.views.CurrentOptionsView extends Backbone.View
 
     events: {
-        "click a.option": "onOptionClick"
+        "click .option": "onOptionClick"
     }
 
     render: ->
@@ -12,12 +12,14 @@ class phrasebook.views.CurrentOptionsView extends Backbone.View
         else
           options = $('<ul id="options"></ul>')
           @presentationModel.get('currentlyVisibleOptions').each (option) ->
-              optionElement = $('<li><a class="option" href="#">' + option.get('name') + '</a></li>')
+              optionElement = $('<li><button type="button" value="cocks" class="option">' + option.get('name') + '</button></li>')
               options.append(optionElement)
-              optionElement.children('a').data({ option: option })
+              optionElement.children('button').data({ option: option })
           @$el.html(options)
-        
+
         return this
         
     onOptionClick: (event) ->
         @presentationModel.chooseOption($(event.target).data().option)
+        window.location.hash="CurrentOptionsView";
+        window.location.hash=null;

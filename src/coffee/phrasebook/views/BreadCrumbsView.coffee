@@ -22,14 +22,13 @@ class phrasebook.views.BreadCrumbsView extends Backbone.View
             optionHTML += '<span class="label">' + option.get('name') + '</span>';
 
             if option == @presentationModel.get('previouslyVisitedOptions').last()
-                optionHTML += '<a href="#" class="delete">Delete</a>';
+                optionHTML += '<a href="#CurrentOptionsView" class="delete">Delete</a>';
 
             optionHTML += '</li>'
 
             optionElement = $(optionHTML)
 
             ul.append(optionElement)
-            optionElement.children('a').data({ option: option })
 
         @$el.html(ul)
         return this

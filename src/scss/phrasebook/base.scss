@@ -3,6 +3,8 @@
 @import "compass/css3/box-shadow";
 @import "compass/typography/text/replacement";
 @import "compass/css3/text-shadow";
+@import "compass/css3/transition";
+@import "compass/utilities/general/clearfix";
 
 html, body {
   padding: 0;
@@ -18,22 +20,15 @@ html, body, #doc {
   width: 100%;
 }
 
-#doc {
-  outline: 1px solid blue;
-}
-
 #BreadCrumbsView {
-  width: 100%;
-  height: 100%;
   position: relative;
+  @include transition(width 1s ease, height 1s ease);
+  width: 100%;
+  height: auto;
 
   #breadcrumbs {
     margin: 0;
     padding: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
 
     @include no-bullets;
 
@@ -41,11 +36,16 @@ html, body, #doc {
       position: relative;
       width: 200px;
       min-height: 40px;
+
       display: block;
       background: image-url("post-it.png") 50% 50%;
 
       margin: 0 auto -25px;
       padding: 25px;
+
+      &:last-child {
+        margin: 0 auto;
+      }
 
       img {
         width: 200px;
@@ -103,14 +103,23 @@ html, body, #doc {
 }
 
 #CurrentOptionsView {
-  height: 10%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+  ul, li {
+    @include no-bullets;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
 
   .options {
     width: 100%;
     height: 100% !important;
     display: block !important;
+  }
+
+  .option {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
   }
 }
