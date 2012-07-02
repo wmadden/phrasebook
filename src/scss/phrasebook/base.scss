@@ -22,7 +22,6 @@ html, body, #doc {
 
 #BreadCrumbsView {
   position: relative;
-  @include transition(width 1s ease, height 1s ease);
   width: 100%;
   height: auto;
 
@@ -31,10 +30,13 @@ html, body, #doc {
     padding: 0;
 
     @include no-bullets;
+    @include clearfix;
 
     .breadcrumb {
+      @include transition(width 1s ease, height 1s ease);
       position: relative;
       width: 200px;
+      //height: 200px;
       min-height: 40px;
 
       display: block;
@@ -43,11 +45,16 @@ html, body, #doc {
       margin: 0 auto -25px;
       padding: 25px;
 
+      &.text-only {
+        height: 40px;
+      }
+
       &:last-child {
         margin: 0 auto;
       }
 
       img {
+        display: block;
         width: 200px;
         height: 200px;
       }
