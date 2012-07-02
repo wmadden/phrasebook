@@ -9,11 +9,13 @@ class phrasebook.views.BreadCrumbsView extends Backbone.View
     render: ->
         ul = $('<ul id="breadcrumbs"></ul>')
         lastElement = null
+        textonly = false
 
         @presentationModel.get('previouslyVisitedOptions').each (option) =>
             breadcrumbClass = 'breadcrumb';
 
-            if not option.get('pictogramURL')?
+            textonly = not option.get('pictogramURL')?
+            if textonly
                 breadcrumbClass += ' text-only';
 
             optionHTML = '<li class="' + breadcrumbClass + '"><div class="content">';
@@ -36,14 +38,25 @@ class phrasebook.views.BreadCrumbsView extends Backbone.View
 
         @$el.html(ul)
 
-        if( lastElement )
+        if( lastElement && @getNumberOfBreadcrumbs() > @previousNumberOfBreadcrumbs )
+            expectedHeight = if textonly
+                                '40px'
+                             else
+                                '200px'
             lastElement
                 .css('opacity', 0)
-                .animate({ width: '200px', height: '200px'}, 'slow')
-                .animate({ opacity: '1.0'}, 'slow')
+                .css('height', 0)
+                .animate({ height: expectedHeight}, 'fast', 'swing', ->
+                    $(this).animate({ opacity: '1.0'}, 'fast')
+                )
 
+
+        @previousNumberOfBreadcrumbs = @getNumberOfBreadcrumbs()
 
         return this
+
+    getNumberOfBreadcrumbs: ->
+        @presentationModel.get('previouslyVisitedOptions').length
 
     onGoBackClick: (event) ->
         @presentationModel.goBack()

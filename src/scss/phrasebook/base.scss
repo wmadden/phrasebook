@@ -33,7 +33,6 @@ html, body, #doc {
     @include clearfix;
 
     .breadcrumb {
-      @include transition(width 1s ease, height 1s ease);
       position: relative;
       width: 200px;
       //height: 200px;
