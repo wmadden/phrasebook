@@ -21,5 +21,3 @@ class phrasebook.views.CurrentOptionsView extends Backbone.View
         
     onOptionClick: (event) ->
         @presentationModel.chooseOption($(event.target).data().option)
-#        window.location.hash="CurrentOptionsView";
-#        window.location.hash=null;
