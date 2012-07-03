@@ -8,13 +8,17 @@ class phrasebook.views.BreadCrumbsView extends Backbone.View
 
     render: ->
         ul = $('<ul id="breadcrumbs"></ul>')
+        lastElement = null
+        textonly = false
+
         @presentationModel.get('previouslyVisitedOptions').each (option) =>
             breadcrumbClass = 'breadcrumb';
 
-            if not option.get('pictogramURL')?
+            textonly = not option.get('pictogramURL')?
+            if textonly
                 breadcrumbClass += ' text-only';
 
-            optionHTML = '<li class="' + breadcrumbClass + '">';
+            optionHTML = '<li class="' + breadcrumbClass + '"><div class="content">';
 
             if option.get('pictogramURL')?
                 optionHTML += '<img width="200" height="200" src="' + option.get('pictogramURL') + '" />';
@@ -24,14 +28,35 @@ class phrasebook.views.BreadCrumbsView extends Backbone.View
             if option == @presentationModel.get('previouslyVisitedOptions').last()
                 optionHTML += '<a href="#CurrentOptionsView" class="delete">Delete</a>';
 
-            optionHTML += '</li>'
+            optionHTML += '</div></li>'
 
             optionElement = $(optionHTML)
+
+            lastElement = optionElement
 
             ul.append(optionElement)
 
         @$el.html(ul)
+
+        if( lastElement && @getNumberOfBreadcrumbs() > @previousNumberOfBreadcrumbs )
+            expectedHeight = if textonly
+                                '40px'
+                             else
+                                '200px'
+            lastElement
+                .css('opacity', 0)
+                .css('height', 0)
+                .animate({ height: expectedHeight}, 'fast', 'swing', ->
+                    $(this).animate({ opacity: '1.0'}, 'fast')
+                )
+
+
+        @previousNumberOfBreadcrumbs = @getNumberOfBreadcrumbs()
+
         return this
+
+    getNumberOfBreadcrumbs: ->
+        @presentationModel.get('previouslyVisitedOptions').length
 
     onGoBackClick: (event) ->
         @presentationModel.goBack()
