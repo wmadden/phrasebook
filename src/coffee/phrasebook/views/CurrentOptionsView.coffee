@@ -20,4 +20,5 @@ class phrasebook.views.CurrentOptionsView extends Backbone.View
         return this
         
     onOptionClick: (event) ->
+        event.preventDefault()
         @presentationModel.chooseOption($(event.target).data().option)

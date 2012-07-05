@@ -65,4 +65,11 @@ class phrasebook.views.BreadCrumbsView extends Backbone.View
         @presentationModel.get('previouslyVisitedOptions').length
 
     onGoBackClick: (event) ->
-        @presentationModel.goBack()
+        event.preventDefault()
+        breadcrumb = $(event.currentTarget).parents('.breadcrumb')
+
+        breadcrumb.animate({ opacity: '0'}, 'fast', =>
+            breadcrumb.animate({ height: '0' }, 'fast', =>
+                @presentationModel.goBack()
+            )
+        )
