@@ -47,7 +47,13 @@ class phrasebook.views.BreadCrumbsView extends Backbone.View
                 .css('opacity', 0)
                 .css('height', 0)
                 .animate({ height: expectedHeight}, 'fast', 'swing', ->
-                    $(this).animate({ opacity: '1.0'}, 'fast')
+                    $(this).animate({ opacity: '1.0'}, 'fast', ->
+#                        window.location.hash = null
+#                        window.location.hash = "CurrentOptionsView"
+                        $('html, body').animate({
+                            scrollTop: $('#CurrentOptionsView').offset().top
+                        }, 1000);
+                    )
                 )
 
 
